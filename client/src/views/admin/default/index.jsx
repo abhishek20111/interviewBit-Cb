@@ -114,7 +114,6 @@ const Dashboard = () => {
         </div>
 
         {/* Complex Table , Task & Calendar */}
-
         <ComplexTable
           product={product}
           columnsData={columnsDataComplex}

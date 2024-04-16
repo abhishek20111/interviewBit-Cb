@@ -41,10 +41,29 @@ function TopCreatorTable(props) {
       return "Instagram Ads";
     } else if (age > 20 && age <= 30 && gender === "Male") {
       return "Gym Protein Ads";
+    } else if (age > 30 && age <= 40 && gender === "Female") {
+      return "Health and Wellness Products";
+    } else if (age > 30 && age <= 40 && gender === "Male") {
+      return "Fitness Equipment";
+    } else if (age > 40 && age <= 50 && gender === "Female") {
+      return "Beauty Products";
+    } else if (age > 40 && age <= 50 && gender === "Male") {
+      return "Financial Planning Services";
+    } else if (age > 50 && age <= 60 && gender === "Female") {
+      return "Travel and Leisure Offers";
+    } else if (age > 50 && age <= 60 && gender === "Male") {
+      return "Retirement Planning Services";
+    } else if (age > 60 && age <= 70 && gender === "Female") {
+      return "Senior Health Care Services";
+    } else if (age > 60 && age <= 70 && gender === "Male") {
+      return "Senior Living Options";
+    } else if (age > 70 && age <= 80) {
+      return "Personalized Services for Elders";
     } else {
       return "Other Suggestions";
     }
   };
+  
 
   const data = useMemo(
     () =>
