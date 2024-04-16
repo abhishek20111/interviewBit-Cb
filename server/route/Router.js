@@ -182,7 +182,8 @@ router.post('/products', async (req, res) => {
             sales,
             discount,
             rating,
-            features
+            features,
+            dateAdded
         } = req.body;
 
         const newProduct = new Product({

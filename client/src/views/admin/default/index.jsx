@@ -50,9 +50,6 @@ const Dashboard = () => {
   const totalEarnings = (completedAmount + pendingAmount);
   const totalSales = product.reduce((acc, curr) => acc + curr.sales, 0);
 
-
-
-
   return (
     <div>
       {/* Card widget */}

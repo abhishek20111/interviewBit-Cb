@@ -12,7 +12,7 @@ import SmallApex from "./components/SmallApex";
 const Marketplace = () => {
   const userdata = useSelector((state) => state.user.userData) || [];
   const [genderFilter, setGenderFilter] = useState('');
-
+  console.log(userdata);
   const handleFilterChange = (filter) => {
     setGenderFilter(filter === 'All' ? '' : filter);
   };
@@ -136,7 +136,6 @@ const Marketplace = () => {
                   </td>
                   <td  className="p-2">
                     <button className="rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-600 bg-blueSecondary text-white px-2 py-2">
-
                     Apply
                     </button>
                   </td>

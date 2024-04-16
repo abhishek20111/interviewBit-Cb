@@ -27,9 +27,9 @@ const ProfileOverview = () => {
         <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-4">
           <Project />
         </div>
-        <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-5">
+        {/* <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-5">
           <General />
-        </div>
+        </div> */}
 
         <div className="col-span-5 lg:col-span-12 lg:mb-0 3xl:!col-span-3">
           <Notification />

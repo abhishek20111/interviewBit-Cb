@@ -33,6 +33,8 @@ const productSchema = new mongoose.Schema({
         default: 0
     },
     features: [String],
+    dateAdded:String
+
 }, {timestamps: true});
 
 module.exports = mongoose.model('Product', productSchema);

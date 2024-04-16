@@ -21,11 +21,7 @@ const userSchema = new mongoose.Schema({
         default:[]
     }],
     preferences: [String],
-    cart:[{
-        type: ObjectId,
-        ref: "Product",
-        default:[]
-    }]
+    cart:[String]
 
 },{timestamps: true})
 
