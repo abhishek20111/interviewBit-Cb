@@ -17,6 +17,47 @@ const Marketplace = () => {
     setGenderFilter(filter === 'All' ? '' : filter);
   };
 
+  const setPreference = (user) => {
+    const { age, gender, preferences } = user;
+    let suggestion = "";
+  
+    // Check preferences and suggest accordingly
+    if (preferences.includes("Electronic")) {
+      if (age > 20) {
+        suggestion = "PS5";
+      } else {
+        suggestion = "Electronic toys";
+      }
+    } else if (preferences.includes("Clothing")) {
+      suggestion = "Fashion accessories";
+    } else if (preferences.includes("Grocery")) {
+      suggestion = "Cooking utensils";
+    } else if (preferences.includes("Utility")) {
+      suggestion = "Home appliances";
+    }
+  
+    // Check gender and age for specific suggestions
+    if (suggestion !== "") {
+      if (gender === "Male") {
+        if (age > 20) {
+          suggestion = `${suggestion}`;
+        } else {
+          suggestion = `${suggestion}`;
+        }
+      } else if (gender === "Female") {
+        if (age > 20) {
+          suggestion = `${suggestion}`;
+        } else {
+          suggestion = `${suggestion}`;
+        }
+      }
+    }
+  
+    return suggestion;
+  };
+  
+  
+
   const filteredData = genderFilter
     ? userdata.filter((user) => user.gender === genderFilter)
     : userdata;
@@ -66,9 +107,10 @@ const Marketplace = () => {
                 <th className="border hover:bg-gray-200 px-4 py-2">Age</th>
                 <th className="border hover:bg-gray-200 px-4 py-2">Gender</th>
                 <th className="border hover:bg-gray-200 px-4 py-2">City</th>
-                <th className="border hover:bg-gray-200 px-4 py-2">
+                <th className=" hover:bg-gray-200 px-4 py-2">
                   Preferences
                 </th>
+                <th className="border hover:bg-gray-200 px-4 py-2"></th>
               </tr>
             </thead>
             <tbody>
@@ -77,7 +119,7 @@ const Marketplace = () => {
                   <td className="border border-g px-4 py-2">
                     {user.name}
                   </td>
-                  <td className="border border-g px-4 py-2">
+                  <td className="border border-g px-4 py-2 overflow-auto">
                     {user.email.split("example")[0]}
                   </td>
                   <td className="border border-g px-4 py-2">
@@ -89,8 +131,14 @@ const Marketplace = () => {
                   <td className="border border-g px-4 py-2">
                     {user.city}
                   </td>
-                  <td className="border border-g px-4 py-2">
-                    {user.preferences}
+                  <td className="border border-g text-left px-4 py-2">
+                    {setPreference(user)}
+                  </td>
+                  <td  className="p-2">
+                    <button className="rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-600 bg-blueSecondary text-white px-2 py-2">
+
+                    Apply
+                    </button>
                   </td>
                 </tr>
               ))}

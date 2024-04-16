@@ -35,7 +35,7 @@ class ApexChart extends React.Component {
             }
           },
           colors: ['#1ab7ea', '#2fff00', '#aebe1c', '#b500ac'],
-          labels: ['Instagram ', 'Messenger', 'Facebook', 'Message'],
+          labels: ['Instagram ', 'SMS', 'Facebook', 'Youtube'],
           legend: {
             show: true,
             floating: true,
