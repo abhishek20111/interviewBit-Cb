@@ -8,7 +8,7 @@ import Profile from "views/admin/profile";
 import DataTables from "views/admin/tables";
 import CustomerFeedBack from "views/admin/customerFeedback/CustomerFeedback";
 import RTLDefault from "views/rtl/default";
-
+import Top from "views/admin/top";
 // Auth Imports
 import SignIn from "views/auth/SignIn";
 
@@ -57,5 +57,12 @@ const routes = [
     icon: <MdPerson className="h-6 w-6" />,
     component: <CustomerFeedBack/>,
   },
+{
+  name: "Top Products",
+  layout: "/admin",
+  path: "top",
+  icon: <MdPerson className="h-6 w-6" />,
+  component: <Top />,
+}
 ];
 export default routes;

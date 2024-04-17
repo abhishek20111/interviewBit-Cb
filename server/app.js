@@ -20,16 +20,20 @@ app.use(cors({ credentials: true }));
 // app.use(cors({ origin: origin, credentials: true }));//provided by the `cors` package for enabling Cross-Origin Resource Sharing (CORS) in an Express app, CORS is a mechanism that allows a web page to make requests to a different domain. 
  
 
-mongoose.connect(`mongodb://localhost:27017`, {
-    dbName: 'AdminDashBoard'
-}) 
-    .then(() => {
-        console.log("Successfully connect to MongoDB");
-    })
-    .catch(err => {
-        console.error("Connection error", err.message);
-    });
+mongoose
+  .connect("mongodb://127.0.0.1:27017/Ecommerce-Analysis")
+  .then(() => {
+    console.log("DB is connected");
 
+    //  Product.insertMany(dataProduct)
+    // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
+    // AffiliateStat.insertMany(dataAffiliateStat);
+  })
+  .catch((e) => {
+    console.log("DB error " + e);
+  });
 
 app.use('/', router1);
 
